@@ -1,0 +1,29 @@
+# Python
+pycache/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.python-version
+.python-version-default
+
+# Sanal Ortamlar (Virtual Environments)
+venv/
+env/
+.venv/
+.env/
+
+# IDE / OS Dosyaları
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Veri Dosyaları (Büyük dosyaları engellemek için)
+*.csv
+*.json
+*.xlsx
