@@ -1,39 +1,42 @@
-# Proje: [Projenin Tam Adını Buraya Yaz]
+# Gold Prices Analysis
 
-**Tarih:** [YYYY-MM-DD]
+This project analyzes the performance of 1 Ounce of Gold against a selection of key currencies from January 1999 to July 2021.
 
----
+## Analysis
 
-## 1. Amaç ve Kapsam
+The analysis is performed in the `notebooks/02_gorsellestirme_ve_sonuc.ipynb` notebook.
 
-Bu analizin temel amacı, [temel araştırma sorusunu veya hipotezi buraya yazın, örn: "X ile Y arasındaki şaşırtıcı ilişkiyi ortaya çıkarmak"].
+The main goal is to answer the question: "If the price of 1 Ounce of Gold was '100 units' at the beginning of 1999, what would its value be today in different currencies?"
 
-## 2. Veri Kaynağı
+### Key Currencies
 
-* **Veri Seti:** [Veri setinin adı, örn: "Kaggle Dünya Mutluluk Raporu 2024"]
-* **Kaynak Linki:** [Doğrudan veri kaynağının URL'si]
-* **Açıklama:** Veri setinin ne içerdiğine dair kısa bir bilgi.
+The analysis focuses on the following currencies:
+- United States (USD)
+- Europe (EUR)
+- United Kingdom (GBP)
+- Japan (JPY)
+- Turkey (TRY)
 
-## 3. Temel Bulgular ve Görselleştirme
+### Methodology
 
-Analiz sonucunda ulaşılan en çarpıcı bulgu... [Bulguyu 1-2 cümle ile açıklayın].
+1.  **Data Loading:** The data is loaded from `data/1979-2021.csv`.
+2.  **Data Filtering:** The dataset is filtered to include data from January 1, 1999, onwards.
+3.  **Indexing:** The price of gold in each currency is indexed to a baseline of 100 as of January 1999.
+4.  **Visualization:** A line plot is generated to visualize the change in the indexed price of gold over time for each currency. A logarithmic scale is used on the y-axis to accommodate the wide range of values.
 
-Bu bulguyu en iyi özetleyen görsel aşağıdadır:
+## Results
 
-![Öne Çıkan Görsel](assets/gorsel_dosya_adi.png)
+The final visualization shows the relative performance of each currency against gold.
 
-## 4. Kullanılan Teknolojiler ve Kütüphaneler
+![Gold Price Index](notebooks/gold_price_index_log_plot_final.png)
 
-Bu analizi çalıştırmak için gereken temel bağımlılıklar `requirements.txt` dosyasında belirtilmiştir.
+## How to Run
 
-* `pandas`
-* `matplotlib`
-* `seaborn`
-* [Diğerleri...]
-
-## 5. Nasıl Çalıştırılır? (Tekrarlanabilirlik)
-
-1.  Bu proje klasörünün içindeyken bir sanal ortam oluşturun: `python -m venv venv`
-2.  Aktif edin: `source venv/bin/activate` (Mac/Linux) veya `venv\Scripts\activate` (Windows)
-3.  Bağımlılıkları yükleyin: `pip install -r requirements.txt`
-4.  `notebooks/` klasöründeki Jupyter Notebook dosyalarını sırayla çalıştırın.
+1.  Install the required Python packages:
+    ```
+    pip install -r requirements.txt
+    ```
+2.  Run the Jupyter Notebook:
+    ```
+    jupyter notebook notebooks/02_gorsellestirme_ve_sonuc.ipynb
+    ```
